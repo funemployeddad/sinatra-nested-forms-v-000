@@ -1,3 +1,13 @@
-<h1> Display your Pirate here </h1>
+<h1> <%= @pirate.name %> </h1>
 
-<%= @pirate.name %>
+
+<h2> SHIPS </h2>
+<ul>
+  <% @pirate.ships.each_with_index do |ship, i| %>
+    <li><%= index + 1 %></li>
+
+    <li><%= ship.name %></li>
+    <li><%= ship.category %></li>
+    <li><%= ship.booty %></li>
+  <% end %>
+</ul>
